@@ -14,5 +14,19 @@
         outline: none;
         border: solid 1px white;
         margin: 5px;
+        padding: 5px 0 5px 10px ;
+        &:focus{
+            box-shadow: 0 0 10px rgb(135, 135, 135);
+        }
+    }
+    button{
+        width:100%;
+        border: none;
+        border-radius: 10px;
+        margin: 20px 0;
+        padding: 5px 0;
+        background: rgb(0, 255, 187);
+        outline: none;
+        cursor: pointer;
     }
 }

@@ -5,7 +5,6 @@ import './index.scss';
 
 function App(props: any) {
   return (
-    
     <div className="App">
       <Content isAuth={props.store.data.isAuth}/>
     </div>
@@ -15,6 +14,5 @@ function App(props: any) {
 export default connect(
   state => ({
     store: state
-  }),
-  dispatch => ({})
+  })
 )(App);
