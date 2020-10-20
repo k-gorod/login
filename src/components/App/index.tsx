@@ -1,22 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import {store} from '../../constants';
+import React from 'react';
+import { connect } from 'react-redux';
 import Content from '../Content';
 import './index.scss';
 
-function App() {
-  const [isAuth,setAuth] = useState(false);
-  
-  const changeAuth = (value: boolean)=>{
-    setAuth(value)
-  }
-  useEffect(()=>{
-    store.changeAuth = changeAuth;
-  },[])
+function App(props: any) {
   return (
+    
     <div className="App">
-      <Content isAuth={isAuth}/>
+      <Content isAuth={props.store.data.isAuth}/>
     </div>
   );
 }
 
-export default App;
+export default connect(
+  state => ({
+    store: state
+  }),
+  dispatch => ({})
+)(App);
