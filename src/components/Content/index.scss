@@ -1,0 +1,18 @@
+.login__wrapper{
+    display:grid;
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    background: rgb(237, 255, 239);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-shadow: 0 0 10px rgb(102, 101, 101);
+    font-family: cursive;
+    input{
+        border-radius: 10px;
+        outline: none;
+        border: solid 1px white;
+        margin: 5px;
+    }
+}

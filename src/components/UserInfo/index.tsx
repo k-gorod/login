@@ -1,10 +1,16 @@
 import React from 'react';
+import { store } from '../../constants';
 import './index.scss';
 
-function UserInfo() {
+const UserInfo: React.FC = () => {
+    const click = () => {
+        store.changeAuth(false)
+    }
   return (
-    <div className="userInfo">
-      UserInfo component
+    <div className="login__userInfo" onClick={click}>
+      <h2>User Information</h2>
+      <p>Name: Vasya</p>
+      <p>E-mail: qwe@qw.qw</p>
     </div>
   );
 }

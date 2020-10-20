@@ -5,13 +5,15 @@ import './index.scss';
 function Login() {
     const click = () => {
         store.changeAuth(true)
-        console.log('here');
-        
     }
   return (
-    <div className="login" onClick={click}>
-        Login component
-    </div>
+    <form className="login__form" onClick={click}>
+      <h2>Login</h2>
+        <label htmlFor="mail">E-mail : </label>
+        <input type="text" id='mail'/>
+        <label htmlFor="pass">Password : </label>
+        <input type="text" id='pass'/>
+    </form>
   );
 }
 
