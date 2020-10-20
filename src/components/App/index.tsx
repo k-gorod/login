@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import Login from '../Login';
-import UserInfo from '../UserInfo';
+import {store} from '../../constants';
+import Content from '../Content';
 import './index.scss';
 
 function App() {
   const [isAuth,setAuth] = useState(false);
+  
+  const changeAuth = (value: boolean)=>{
+    setAuth(value)
+  }
   useEffect(()=>{
-    
-  },[isAuth])
+    store.changeAuth = changeAuth;
+  },[])
   return (
     <div className="App">
-      {isAuth?<UserInfo />:<Login />}
+      <Content isAuth={isAuth}/>
     </div>
   );
 }
